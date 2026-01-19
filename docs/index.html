@@ -1,0 +1,364 @@
+<!doctype html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Alex Sterling — Product Engineer</title>
+
+  <!-- Tailwind CDN + plugins -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <!-- Tailwind config -->
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#135bec",
+            "background-light": "#f6f6f8",
+            "background-dark": "#101622",
+          },
+          fontFamily: { "display": ["Inter", "sans-serif"] },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&display=swap" rel="stylesheet"/>
+
+  <style>
+    body { font-family: 'Inter', sans-serif; -webkit-tap-highlight-color: transparent; min-height: max(884px, 100dvh); }
+    .ios-status-bar { height: 44px; }
+    .glass-effect { background: rgba(35,47,72,0.4); backdrop-filter: blur(8px); }
+    .nav-link { scroll-margin-top: 80px; } /* anchor scroll offset */
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white transition-colors duration-300">
+
+  <!-- Site container -->
+  <div class="min-h-screen max-w-[980px] mx-auto">
+
+    <!-- Top navigation -->
+    <header class="sticky top-0 z-50 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+      <div class="max-w-4xl mx-auto flex items-center justify-between p-4">
+        <div class="flex items-center gap-3">
+          <button id="menu-toggle" class="lg:hidden p-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800" aria-label="Open menu">
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+          <a href="#home" class="text-lg font-bold tracking-tight">Alex Sterling</a>
+        </div>
+
+        <nav id="top-nav" class="hidden lg:flex items-center gap-4" aria-label="Primary">
+          <a class="nav-link text-sm font-medium hover:text-primary" href="#home">Home</a>
+          <a class="nav-link text-sm font-medium hover:text-primary" href="#expertise">Expertise</a>
+          <a class="nav-link text-sm font-medium hover:text-primary" href="#projects">Projects</a>
+          <a class="nav-link text-sm font-medium hover:text-primary" href="#about">About</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <button id="theme-toggle" class="p-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800" title="Toggle dark mode">
+            <span class="material-symbols-outlined">light_mode</span>
+          </button>
+          <a class="hidden lg:inline-flex items-center gap-2 bg-primary text-white px-4 py-2 rounded-xl shadow" href="#projects">
+            <span class="material-symbols-outlined">rocket_launch</span>
+            View Projects
+          </a>
+        </div>
+      </div>
+
+      <!-- mobile nav (slides down) -->
+      <div id="mobile-nav" class="lg:hidden hidden border-t border-slate-200 dark:border-slate-800 bg-background-light dark:bg-background-dark">
+        <div class="flex flex-col p-3 gap-2">
+          <a class="py-2 px-3 rounded hover:bg-slate-100 dark:hover:bg-slate-800" href="#home">Home</a>
+          <a class="py-2 px-3 rounded hover:bg-slate-100 dark:hover:bg-slate-800" href="#expertise">Expertise</a>
+          <a class="py-2 px-3 rounded hover:bg-slate-100 dark:hover:bg-slate-800" href="#projects">Projects</a>
+          <a class="py-2 px-3 rounded hover:bg-slate-100 dark:hover:bg-slate-800" href="#about">About</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto">
+      <!-- HERO / Home -->
+      <section id="home" class="pt-8 pb-12 px-4" aria-label="Home - Hero">
+        <div class="flex flex-col items-center gap-6">
+          <div class="relative group">
+            <div class="absolute -inset-1 bg-primary rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000" aria-hidden="true"></div>
+            <div class="relative rounded-full border-2 border-primary/20 overflow-hidden w-40 h-40 bg-center bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB3v5peC-g1c8fX8G3UbAf9LeC786mqkY3rChTW42l0VHeykcOGxEwkbkG9l288rqETCq0KmP-XK-64dhRXgilHcD5dBogNQWLjJFObtABSyc2in3FX2-RrmFZK7iyGOCzRoL9AyR3JjjqExFUEJGDZl3p_YX_6w5oeNZVusxu6z2VN5H7x3q7ghVDWNoPTxlieYP_tMnwIszWpDaOMHC7A5-CxuidWuqCpZ13G9g6WDdCoQZi3zNs5lIa6S5HKj3wbVoKiCFrgXqSr");' aria-hidden="true"></div>
+          </div>
+
+          <h1 class="text-3xl font-bold text-center">Product-Minded <span class="block text-primary">Software Engineer</span></h1>
+
+          <div class="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
+            <span class="material-symbols-outlined text-primary text-sm mr-2">school</span>
+            <p class="text-primary text-sm font-semibold tracking-wide">IIIT HYDERABAD</p>
+          </div>
+
+          <p class="text-center text-slate-600 dark:text-[#92a4c9] max-w-xl">
+            Masters in Product Design &amp; Management — bridging the gap between complex engineering and human-centric user needs.
+          </p>
+
+          <div class="flex gap-3 w-full max-w-md">
+            <a class="flex-1 flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-primary text-white font-bold shadow-lg" href="#projects">
+              <span class="material-symbols-outlined">rocket_launch</span>
+              View Projects
+            </a>
+            <a class="flex-1 flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-slate-200 dark:bg-[#232f48] text-slate-900 dark:text-white font-bold" href="#about">
+              <span class="material-symbols-outlined">download</span>
+              Download CV
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Expertise -->
+      <section id="expertise" class="pt-6 pb-10 px-4" aria-label="Expertise">
+        <div class="mb-4 flex items-center justify-between">
+          <h2 class="text-2xl font-bold">Expertise</h2>
+          <span class="text-xs font-bold text-primary px-2 py-1 bg-primary/10 rounded-full">CORE</span>
+        </div>
+
+        <div class="grid gap-4 md:grid-cols-2">
+          <!-- Technical Excellence -->
+          <div class="bg-white dark:bg-slate-900/40 p-4 rounded-xl border border-slate-200 dark:border-slate-800">
+            <h3 class="font-bold mb-3">Technical Excellence</h3>
+
+            <div class="space-y-3">
+              <div>
+                <div class="flex justify-between items-end mb-1">
+                  <p class="text-base font-semibold">Python &amp; Java</p>
+                  <p class="text-primary text-xs font-bold">95%</p>
+                </div>
+                <div class="w-full bg-slate-200 dark:bg-[#324467] h-1.5 rounded-full overflow-hidden">
+                  <div class="h-full bg-primary rounded-full" style="width:95%"></div>
+                </div>
+                <p class="text-xs italic text-slate-500 dark:text-[#92a4c9] mt-2">Backend &amp; Systems Architecture</p>
+              </div>
+
+              <div>
+                <div class="flex justify-between items-end mb-1">
+                  <p class="text-base font-semibold">Cloud Infrastructure</p>
+                  <p class="text-primary text-xs font-bold">85%</p>
+                </div>
+                <div class="w-full bg-slate-200 dark:bg-[#324467] h-1.5 rounded-full overflow-hidden">
+                  <div class="h-full bg-primary rounded-full" style="width:85%"></div>
+                </div>
+                <p class="text-xs italic text-slate-500 dark:text-[#92a4c9] mt-2">AWS, Docker, Kubernetes</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Strategy -->
+          <div class="space-y-3">
+            <div class="bg-slate-50 dark:bg-slate-800/40 p-4 rounded-xl border border-slate-200 dark:border-slate-800">
+              <div class="flex gap-4 mb-3">
+                <div class="flex items-center justify-center rounded-lg bg-emerald-500/20 text-emerald-500 shrink-0 size-10">
+                  <span class="material-symbols-outlined">psychology</span>
+                </div>
+                <div>
+                  <h4 class="font-bold">UX Research</h4>
+                  <p class="text-xs text-slate-500 dark:text-[#92a4c9]">User-Centric Methodologies</p>
+                </div>
+              </div>
+              <div class="flex gap-2 flex-wrap">
+                <span class="px-2 py-1 bg-white dark:bg-slate-900 border rounded text-xs font-medium uppercase">Qualitative Analysis</span>
+                <span class="px-2 py-1 bg-white dark:bg-slate-900 border rounded text-xs font-medium uppercase">User Personas</span>
+              </div>
+            </div>
+
+            <div class="bg-slate-50 dark:bg-slate-800/40 p-4 rounded-xl border border-slate-200 dark:border-slate-800">
+              <div class="flex gap-4 mb-3">
+                <div class="flex items-center justify-center rounded-lg bg-emerald-500/20 text-emerald-500 shrink-0 size-10">
+                  <span class="material-symbols-outlined">map</span>
+                </div>
+                <div>
+                  <h4 class="font-bold">Roadmap Management</h4>
+                  <p class="text-xs text-slate-500 dark:text-[#92a4c9]">Agile Delivery &amp; Planning</p>
+                </div>
+              </div>
+              <div class="flex gap-2 flex-wrap">
+                <span class="px-2 py-1 bg-white dark:bg-slate-900 border rounded text-xs font-medium uppercase">Prioritization</span>
+                <span class="px-2 py-1 bg-white dark:bg-slate-900 border rounded text-xs font-medium uppercase">Stakeholder Mgmt</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-6">
+          <div class="bg-gradient-to-br from-primary to-emerald-600 rounded-2xl p-6 text-white shadow-lg relative overflow-hidden">
+            <h3 class="text-lg font-bold mb-1">The Intersection</h3>
+            <p class="text-sm opacity-90 leading-relaxed">
+              Leveraging deep technical foundations with human-centered product management to build scalable, impactful solutions.
+            </p>
+            <div class="mt-4 flex items-center gap-2">
+              <div class="h-px flex-1 bg-white/30"></div>
+              <span class="text-[10px] font-bold uppercase tracking-widest bg-white/20 px-2 py-1 rounded">Product Engineer</span>
+              <div class="h-px flex-1 bg-white/30"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects (grid placeholder) -->
+      <section id="projects" class="pt-6 pb-10 px-4" aria-label="Projects">
+        <div class="mb-4 flex items-center justify-between">
+          <h2 class="text-2xl font-bold">Projects</h2>
+          <p class="text-sm text-slate-500 dark:text-slate-400">Selected work</p>
+        </div>
+
+        <div class="grid gap-4 md:grid-cols-2">
+          <!-- Example Project Card -->
+          <article class="bg-white dark:bg-slate-900/40 p-4 rounded-xl border border-slate-200 dark:border-slate-800">
+            <div class="h-40 bg-slate-200 dark:bg-slate-800 rounded-lg mb-3 bg-cover bg-center" style='background-image:url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=2b0b9978e5b5561d8a9d9e5b4e2f6c72");'></div>
+            <h3 class="font-bold">Project Name</h3>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Short description of the project and the impact it delivered.</p>
+            <div class="mt-3 flex items-center gap-2">
+              <a class="text-primary font-semibold text-sm" href="#">View case study</a>
+              <span class="text-xs text-slate-400">•</span>
+              <span class="text-xs text-slate-400">2024</span>
+            </div>
+          </article>
+
+          <!-- Another example -->
+          <article class="bg-white dark:bg-slate-900/40 p-4 rounded-xl border border-slate-200 dark:border-slate-800">
+            <div class="h-40 bg-slate-200 dark:bg-slate-800 rounded-lg mb-3 bg-cover bg-center" style='background-image:url("https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=3b1a3e6b8f2b3f4b3a6c9a0d5a8f1f2a");'></div>
+            <h3 class="font-bold">Project Name</h3>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Short description and what you worked on (frontend, infra, research).</p>
+            <div class="mt-3 flex items-center gap-2">
+              <a class="text-primary font-semibold text-sm" href="#">View case study</a>
+              <span class="text-xs text-slate-400">•</span>
+              <span class="text-xs text-slate-400">2023</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- About & Contact -->
+      <section id="about" class="pt-6 pb-16 px-4" aria-label="About and Contact">
+        <div class="max-w-2xl mx-auto">
+          <div class="flex items-center gap-4">
+            <div class="bg-center bg-no-repeat bg-cover rounded-full h-24 w-24 ring-4 ring-primary/20" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDpERfuzh6nZRrs-oRmBmIYEIjjFzsb0kriWNrFGhCrsdw_f3_ajeF6ce_YYdsU5nUgO86VseDlcKua1jIBcKu19WrgK8dBBkXBNMIcIg-PE3q6EFBQ1Fepj_WXqXLSbXdZyg_3XdaQSUTCanmpf07FoIQhpZbK9TNmF5NUNBhfa_d6IV4yjlLIi84-AWaWyb282gP6juatywygk01bzgLLNU9p1FG9PFCyGR0z5KiUbKtY1U1XHFAOIffvPbewKeeTpTl80CvQJCN4");'></div>
+            <div>
+              <h2 class="text-2xl font-bold">Alex Sterling</h2>
+              <p class="text-primary font-medium">Software Engineer | MS Product Design</p>
+              <p class="text-sm text-slate-500 dark:text-slate-400 flex items-center gap-1 mt-1">
+                <span class="material-symbols-outlined text-sm">school</span>
+                IIIT Hyderabad
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-6 bg-white dark:bg-slate-900/50 p-5 rounded-xl border border-slate-200 dark:border-slate-800">
+            <h3 class="font-bold mb-2">My Journey</h3>
+            <p class="text-slate-600 dark:text-slate-300">
+              I bridge the gap between technical engineering and product management. My experience at <span class="text-primary font-semibold">IIIT Hyderabad</span> refined my ability to build user-centric solutions with robust architecture. I started as a full-stack developer but quickly realized that the most impactful products are born where code meets design thinking.
+            </p>
+          </div>
+
+          <div class="mt-6">
+            <h3 class="font-bold mb-3">What I'm Looking For</h3>
+            <div class="space-y-3">
+              <div class="flex gap-3 items-start">
+                <div class="mt-1 bg-primary/10 text-primary p-2 rounded-lg">
+                  <span class="material-symbols-outlined">rocket_launch</span>
+                </div>
+                <div>
+                  <h4 class="font-semibold">Innovation-Driven Roles</h4>
+                  <p class="text-sm text-slate-500 dark:text-slate-400">Opportunities in early-stage startups where I can influence both the codebase and the product roadmap.</p>
+                </div>
+              </div>
+
+              <div class="flex gap-3 items-start">
+                <div class="mt-1 bg-primary/10 text-primary p-2 rounded-lg">
+                  <span class="material-symbols-outlined">palette</span>
+                </div>
+                <div>
+                  <h4 class="font-semibold">Design-Led Engineering</h4>
+                  <p class="text-sm text-slate-500 dark:text-slate-400">Teams that value accessibility, aesthetics, and user experience as much as they value clean, scalable code.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8">
+            <h3 class="font-bold mb-3">Get in Touch</h3>
+            <form class="space-y-4" onsubmit="event.preventDefault(); alert('Thanks — form submit is demo-only in this template.')">
+              <div>
+                <label class="block text-sm font-medium text-slate-500 mb-2">Full Name</label>
+                <input class="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50" placeholder="Your name" type="text" />
+              </div>
+
+              <div>
+                <label class="block text-sm font-medium text-slate-500 mb-2">Email</label>
+                <input class="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50" placeholder="you@example.com" type="email" />
+              </div>
+
+              <div>
+                <label class="block text-sm font-medium text-slate-500 mb-2">Message</label>
+                <textarea class="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50 resize-none" rows="4" placeholder="Hi Alex, I'd love to talk..."></textarea>
+              </div>
+
+              <button class="w-full bg-primary text-white py-3 rounded-xl font-bold shadow" type="submit">
+                Send Message <span class="material-symbols-outlined align-middle ml-2">send</span>
+              </button>
+            </form>
+          </div>
+
+          <footer class="mt-10 border-t border-slate-200 dark:border-slate-800 pt-6 text-center text-slate-500">
+            <div class="flex justify-center gap-6 mb-4">
+              <a class="hover:text-primary" href="#" aria-label="LinkedIn"><span class="material-symbols-outlined text-2xl">link</span></a>
+              <a class="hover:text-primary" href="#" aria-label="GitHub"><span class="material-symbols-outlined text-2xl">code</span></a>
+              <a class="hover:text-primary" href="#" aria-label="Twitter"><span class="material-symbols-outlined text-2xl">chat</span></a>
+              <a class="hover:text-primary" href="#" aria-label="Email"><span class="material-symbols-outlined text-2xl">mail</span></a>
+            </div>
+            <div class="text-xs">© 2024 Alex Sterling. Built with precision.</div>
+          </footer>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Small utilities -->
+  <script>
+    // menu toggle for mobile
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+      const mobile = document.getElementById('mobile-nav');
+      mobile.classList.toggle('hidden');
+    });
+
+    // theme toggle: persist in localStorage
+    (function () {
+      const btn = document.getElementById('theme-toggle');
+      const root = document.documentElement;
+      const current = localStorage.getItem('theme');
+      if (current === 'dark') root.classList.add('dark');
+      btn.addEventListener('click', () => {
+        root.classList.toggle('dark');
+        localStorage.setItem('theme', root.classList.contains('dark') ? 'dark' : 'light');
+      });
+    })();
+
+    // smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', (e) => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          // close mobile nav after click
+          const mobile = document.getElementById('mobile-nav');
+          if (mobile && !mobile.classList.contains('hidden')) mobile.classList.add('hidden');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
